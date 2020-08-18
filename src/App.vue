@@ -13,6 +13,23 @@ export default {
   components: {
     HelloWorld,
   },
+  head: {
+    title: new Date().getTime(),
+    meta: function() {
+      return [
+        { property: "og:title", content: new Date().getTime() },
+        { property: "og:description", content: new Date().getTime() },
+        {
+          property: "og:image",
+          content:
+            "https://dummyimage.com/600x400/000/fff&text=image" +
+            new Date().getTime(),
+        },
+        { name: "description", content: new Date().getTime() },
+        { name: "keywords", content: new Date().getTime() },
+      ];
+    },
+  },
 };
 </script>
 
